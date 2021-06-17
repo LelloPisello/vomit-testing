@@ -78,6 +78,13 @@ namespace geo
         vec3 position;
         vec2 uv;
     };
+
+    //lista di vertici e numero, caricato da file in header #TODO
+    struct mesh3D
+    {
+        vertex3D *vertices;
+        unsigned vert_num;
+    };
 }
 
 #endif
