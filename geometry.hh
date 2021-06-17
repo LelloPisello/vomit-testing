@@ -4,6 +4,35 @@
 
 namespace geo
 {
+    struct vec2
+    {
+        float x, y;
+
+        //costruttori
+        vec2(void);
+        constexpr vec2(float, float);
+        constexpr vec2(const vec2 &);
+        constexpr vec2(float);
+
+        ~vec2(void) = default;
+
+        //accesso con []
+        operator float *(void);
+        constexpr float at(unsigned) const;
+
+        //operator overloading
+        vec2 &operator=(const vec2 &) = default;
+
+        vec2 operator+(const vec2 &) const;
+        vec2 operator-(const vec2 &) const;
+        vec2 operator*(const vec2 &) const;
+        vec2 operator/(const vec2 &) const;
+
+        vec2 &operator+=(const vec2 &);
+        vec2 &operator-=(const vec2 &);
+        vec2 &operator*=(const vec2 &);
+        vec2 &operator/=(const vec2 &);
+    };
     //vettore a tre componenti
     struct vec3
     {
@@ -35,12 +64,20 @@ namespace geo
     };
 
     float length(const vec3 &);
+    float length(const vec2 &);
     vec3 normalize(const vec3 &);
-
+    vec2 normalize(const vec2 &);
     //prodotto scalare
     float dot(const vec3 &, const vec3 &);
+    float dot(const vec2 &, const vec2 &);
     //prodotto vettoriale
     vec3 cross(const vec3 &, const vec3 &);
+
+    struct vertex3D 
+    {
+        vec3 position;
+        vec2 uv;
+    };
 }
 
 #endif
