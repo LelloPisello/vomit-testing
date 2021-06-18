@@ -23,10 +23,10 @@ namespace geo
         //operator overloading
         vec2 &operator=(const vec2 &) = default;
 
-        vec2 operator+(const vec2 &) const;
-        vec2 operator-(const vec2 &) const;
-        vec2 operator*(const vec2 &) const;
-        vec2 operator/(const vec2 &) const;
+        constexpr vec2 operator+(const vec2 &) const;
+        constexpr vec2 operator-(const vec2 &) const;
+        constexpr vec2 operator*(const vec2 &) const;
+        constexpr vec2 operator/(const vec2 &) const;
 
         vec2 &operator+=(const vec2 &);
         vec2 &operator-=(const vec2 &);
@@ -52,10 +52,10 @@ namespace geo
 
         vec3& operator = (const vec3&) = default;
 
-        vec3 operator + (const vec3&) const;
-        vec3 operator - (const vec3&) const;
-        vec3 operator * (const vec3&) const;
-        vec3 operator / (const vec3&) const;
+        constexpr vec3 operator + (const vec3&) const;
+        constexpr vec3 operator - (const vec3&) const;
+        constexpr vec3 operator * (const vec3&) const;
+        constexpr vec3 operator / (const vec3&) const;
 
         vec3& operator += (const vec3 &);
         vec3& operator -= (const vec3 &);
@@ -68,10 +68,10 @@ namespace geo
     vec3 normalize(const vec3 &);
     vec2 normalize(const vec2 &);
     //prodotto scalare
-    float dot(const vec3 &, const vec3 &);
-    float dot(const vec2 &, const vec2 &);
+    constexpr float dot(const vec3 &, const vec3 &);
+    constexpr float dot(const vec2 &, const vec2 &);
     //prodotto vettoriale
-    vec3 cross(const vec3 &, const vec3 &);
+    constexpr vec3 cross(const vec3 &, const vec3 &);
 
     struct vertex3D 
     {
