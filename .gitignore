@@ -1,3 +1,5 @@
 .vscode/
 *.exe
+*.o
 *~
+main_test.cc
