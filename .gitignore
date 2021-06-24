@@ -5,3 +5,7 @@
 main_test.cc
 *.ncm
 *.slm
+*.tex
+*.txl
+*.ptxl
+*.plt
