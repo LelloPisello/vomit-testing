@@ -15,6 +15,7 @@ namespace geo
     map_t(const map_t&);
     map_t(map_t&&);
     constexpr map_t(void) : sectors(nullptr), num_sectors(0) {}
+    ~map_t(void);
   };
 
   struct map_loader_t //carica in memoria tutte le informazioni sulla mappa dal file file_location
