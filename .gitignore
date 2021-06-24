@@ -3,3 +3,5 @@
 *.o
 *~
 main_test.cc
+*.ncm
+*.slm
