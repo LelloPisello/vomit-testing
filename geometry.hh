@@ -13,9 +13,9 @@ namespace geo
 
         //costruttori
         vec2(void);
-        constexpr vec2(float x, float y) : x(x), y(y) {}
+        constexpr explicit vec2(float x, float y) : x(x), y(y) {}
         constexpr vec2(const vec2& that) : x(that.x), y(that.y) {}
-        constexpr vec2(float val) : x(val), y(val) {}
+        constexpr explicit vec2(float val) : x(val), y(val) {}
 
         ~vec2(void) = default;
 
@@ -64,9 +64,9 @@ namespace geo
 
         //costruttori
         vec3(void);
-        constexpr vec3(float x, float y, float z) : x(x), y(y), z(z) {}
+        constexpr explicit vec3(float x, float y, float z) : x(x), y(y), z(z) {}
         constexpr vec3(const vec3& that) : x(that.x), y(that.y), z(that.z) {}
-        constexpr vec3(float val) : x(val), y(val), z(val) {}
+        constexpr explicit vec3(float val) : x(val), y(val), z(val) {}
 
         ~vec3(void) = default;
 
@@ -141,6 +141,10 @@ namespace geo
     {
         vec3 position;
         vec2 uv;
+        /*
+        #TODO aggiungere una classe per le texture, così da assegnare ad ogni triangolo una texture specifica 
+        sarebbe più veloce avere un array di texture globale e salvare per ogni triangolo l'indice della texture in questo array?
+        */
     };
 
     //lista di vertici e numero, caricato da file in header #TODO
