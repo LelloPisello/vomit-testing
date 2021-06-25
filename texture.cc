@@ -1,4 +1,5 @@
 #include "texture.hh"
+#include "utils.hh"
 
 namespace geo
 {
@@ -12,7 +13,7 @@ namespace geo
     //da riempire con il codice analogo al costruttore (const char*) 
     return *this;
   }
-  color32_t palette_t::operator[] (unsigned char index)
+  color32_t palette_t::operator[] (u8 index)
   {
     return range[index]; 
   }
@@ -45,7 +46,7 @@ namespace geo
   {//elimina la parte di memoria dinamica della texture
     for(int i = 0; i < image_size.x; ++i) delete[] image[i];
   }
-  unsigned char palette_texture_t::from_uv(float x, float y) // da sostituire unsigned char con byte_t 
+  u8 palette_texture_t::from_uv(float x, float y) // da sostituire unsigned char con byte_t 
   {
     //ritorna il colore della palette rispetto all'indice dato dalla texture
     return
