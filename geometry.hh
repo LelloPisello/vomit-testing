@@ -1,7 +1,7 @@
 #ifndef GEOMETRY_h_
 #define GEOMETRY_h_
 //header guards
-
+#include "utils.hh"
 
 
 //IMPORTANTE: le funzioni constexpr vengono definite qua
@@ -143,15 +143,16 @@ namespace geo
         vec2 uv;
         /*
         #TODO aggiungere una classe per le texture, così da assegnare ad ogni triangolo una texture specifica 
-        sarebbe più veloce avere un array di texture globale e salvare per ogni triangolo l'indice della texture in questo array?
+        sarebbe più veloce avere un array di texture globale e salvare per ogni triangolo l'indice della texture in questo array? SI FATTO
         */
+        u8 texture_index;
     };
 
     //lista di vertici e numero, caricato da file in header #TODO
     struct mesh3D
     {
-        vertex3D *vertices;
-        unsigned vert_num;
+        vertex3D* vertices;
+        unsigned short triangle_num;
     };
 }
 
