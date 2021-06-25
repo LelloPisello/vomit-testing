@@ -2,18 +2,19 @@
 #define TEXTURE_h_
 
 #define PALETTE_SIZE 256
+#include "utils.hh"
 #include "geometry.hh"
 
 namespace geo
 {
   struct color24_t //colore a 24 bit (come da schermo)
   {
-    unsigned char r, g, b;
+    u8 r, g, b;
   };
 
   struct color32_t //colore a 32 bit (come da schermo ma con opacità)
   {
-    unsigned char r, g, b, a;
+    u8 r, g, b, a;
   };
 
   struct palette_t
@@ -39,18 +40,18 @@ namespace geo
 
   struct palette_texture_t //texture utilizzante 
   {
-    unsigned char** image;
+    u8** image;
     vec2 image_size;
     constexpr palette_texture_t(void) : image(nullptr), image_size(vec2{0, 0}) {}
     ~palette_texture_t(void);
     palette_texture_t(const char* filename); //carica texture in memoria da file di tipo .tex
-    unsigned char from_uv(float x, float y) const;
+    u8 from_uv(float x, float y) const;
   };
 
   struct texture_list_t
   {
     texture_t* texture_list;
-    unsigned char texture_num;
+    u8 texture_num;
     texture_list_t(void);
     texture_list_t(const char* filename);
     ~texture_list_t(void);
@@ -60,7 +61,7 @@ namespace geo
   struct palette_texture_list_t
   {
     palette_texture_t* texture_list;
-    unsigned char texture_num;
+    u8 texture_num;
     palette_texture_list_t(void);
     palette_texture_list_t(const char* filename);
     ~palette_texture_list_t(void);
