@@ -25,7 +25,7 @@ namespace geo
     constexpr palette_t(void) : range{} {}
     palette_t(const char*);
     palette_t& from_file(const char* filename); //carica i colori della palette da un file di tipo .plt
-    color32_t operator[](unsigned char) const; //ritorna il colore della palette all'indice x
+    color32_t operator[](u8) const; //ritorna il colore della palette all'indice x
   };
 
   struct texture_t
