@@ -3,7 +3,6 @@
 //header guards
 #include "utils.hh"
 
-
 //IMPORTANTE: le funzioni constexpr vengono definite qua
 namespace geo
 {
@@ -172,6 +171,19 @@ namespace geo
         triangle3D* triangles; //non condividiamo vertici tra triangoli dato il numero ristretto
         unsigned short triangle_num;
         mesh3D& from_file(const char* filename); //solita roba 
+    };
+    
+    struct pLight3D
+    {
+        vec3 position;
+        vec3 intensity;
+    };
+    
+    struct camera3D
+    {
+        vec3 position;
+        vec3 angle;
+        vec3 size;
     };
 }
 
