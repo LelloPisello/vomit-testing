@@ -9,3 +9,5 @@ main_test.cc
 *.txl
 *.ptxl
 *.plt
+*.mdl
+*.obj
