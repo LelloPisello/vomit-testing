@@ -2,7 +2,6 @@
 
 namespace geo
 {
-  extern palette_t current_palette;
   //sezione dedicata ad alcuni costruttori e funzioni della struttura palette_t
   palette_t::palette_t(const char* filename)
   {
@@ -46,19 +45,17 @@ namespace geo
   {//elimina la parte di memoria dinamica della texture
     for(int i = 0; i < image_size.x; ++i) delete[] image[i];
   }
-  color32_t palette_texture_t::from_uv(float x, float y)
+  unsigned char palette_texture_t::from_uv(float x, float y) // da sostituire unsigned char con byte_t 
   {
     //ritorna il colore della palette rispetto all'indice dato dalla texture
-    return current_palette
-    [
+    return
       image
       [
         int(x * (image_size.x - 1))
       ]
       [
         int(y * (image_size.y - 1))
-      ]
-    ]
+      ];
   }
   
   
