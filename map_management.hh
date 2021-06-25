@@ -20,6 +20,7 @@ namespace geo
     palette_t palette; //palette
     palette_texture_list_t texture_list; //palette
     entity_info_t* entity_types;//tipi di entità 
+    u16 num_entity_types;
     entity_list_t entity_list; //array contenente le entità, (si potrebbe escludere il numero di tipi da qua dentro)
     map_t(const map_t&);
     map_t(map_t&&);
