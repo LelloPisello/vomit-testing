@@ -44,7 +44,7 @@ namespace geo
     constexpr palette_texture_t(void) : image(nullptr), image_size(vec2{0, 0}) {}
     ~palette_texture_t(void);
     palette_texture_t(const char* filename); //carica texture in memoria da file di tipo .tex
-    color32_t from_uv(float x, float y) const;
+    unsigned char from_uv(float x, float y) const;
   };
 
   struct texture_list_t
