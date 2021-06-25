@@ -2,29 +2,29 @@
 #define MAP_h_
 
 #include "geometry.hh"
-
+#include "texture.hh"
+#include "entity.hh"
 //caricamento mappe e strutture per contenere i dati sulla mappa
 
 namespace geo
 {
-  //contiene informazioni sulla mappa
+  //contiene tutte le informazioni sulla mappa
+  /*
+  pensavo di riempire una di queste strutture ogni volta che entro in una mappa
+  contiene la palette della mappa, l'array delle entità, e l'array delle texture
+  */
   struct map_t
   {
-    mesh3D* sectors; //settori dopo il BSP
+    mesh3D* sectors; //settori dopo il BSP (da creare una classe sector)
     unsigned num_sectors; //numero di settori
+    palette_t palette; //palette
+    palette_texture_list_t texture_list; //palette
+    entity_info_t* entity_types;//tipi di entità 
+    entity_list_t entity_list; //array contenente le entità, (si potrebbe escludere il numero di tipi da qua dentro)
     map_t(const map_t&);
     map_t(map_t&&);
     constexpr map_t(void) : sectors(nullptr), num_sectors(0) {}
     ~map_t(void);
-  };
-
-  struct map_loader_t //carica in memoria tutte le informazioni sulla mappa dal file file_location
-  {
-  private:
-    const char* file_location;
-  public:
-    map_loader_t& open(const char*);
-    const map_loader_t& operator >> (map_t&) const;
   };
 }
 #endif
