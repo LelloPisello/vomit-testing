@@ -185,6 +185,12 @@ namespace geo
         vec3 angle;
         vec3 size;
     };
+    
+    struct plane3D
+    {
+        vec3 normal;
+        float dist;
+    };
 }
 
 #endif
