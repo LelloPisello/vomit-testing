@@ -20,4 +20,11 @@ using f32 = float;
 using f64 = double;
 using d64 = long double;
 
+template <typename _type>
+struct binary_tree_t
+{
+  binary_tree_t<_type> *left = nullptr, *right = nullptr;
+  _type data;
+};
+
 #endif
