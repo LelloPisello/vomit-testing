@@ -25,11 +25,28 @@ namespace geo
         i16 health;
     };
     
+    struct brush_entity_t
+    {
+        //modello dell'entità
+        const mesh3D model;
+        //posizione iniziale
+        const vec3 position_starting;
+        //angolo inziale
+        const vec3 angle_starting;
+        
+        vec3 position;
+        vec3 angle;
+        i16 health;
+    };
+    
     struct entity_list_t
     {
         entity_t*** entity_list; //triplo pointer, array sostanzialmente bidimensionale, dato che l'ultimo "passaggio" conterrà un entità sola.
+        //numero di entita' con brush assegnato e lista
+        brush_entity_t* brush_entity_list;
+        u8 brush_entity_num;
         //costruttori
-        constexpr entity_list_t(void) : entity_list(nullptr) {}
+        constexpr entity_list_t(void) : entity_list(nullptr), brush_entity_list(nullptr), brush_entity_num(0) {}
         explicit entity_list_t(u16 num_types);
         explicit entity_list_t(const char* filename);
         entity_list_t(const entity_list_t&) = delete;
