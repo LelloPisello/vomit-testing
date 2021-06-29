@@ -11,3 +11,4 @@ main_test.cc
 *.plt
 *.mdl
 *.obj
+*.dll
