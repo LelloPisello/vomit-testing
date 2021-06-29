@@ -17,7 +17,7 @@ namespace geo
   
   struct BSP_sector_t
   {
-    mesh3D geometry; //geometria del settore
+    mesh3D back, front; //geometria del settore
     plane3D plane; //piano per il bsp
   };
   
