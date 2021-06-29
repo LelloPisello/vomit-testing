@@ -140,6 +140,7 @@ namespace geo
     {
         vec3 position;
         vec2 uv;
+        u8 texture_index;
         /*
         #TODO aggiungere una classe per le texture, così da assegnare ad ogni triangolo una texture specifica 
         sarebbe più veloce avere un array di texture globale e salvare per ogni triangolo l'indice della texture in questo array? SI FATTO
@@ -148,14 +149,7 @@ namespace geo
 
     struct triangle3D
     {
-        union //verts condivide memoria con i vertici a b c, quindi accedere a verts[0] è la stessa cosa che accedere ad 'a'
-        {
-            vertex3D verts[3];
-            struct
-            {
-                vertex3D a, b, c;
-            };
-        };
+        vertex3D verts[3]; 
         u8 texture_index; //indice della texture rispetto all'array contenuto nella struttura della mappa
         vertex3D& operator[](u8);
     };
