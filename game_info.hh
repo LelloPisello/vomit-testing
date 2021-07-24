@@ -6,7 +6,7 @@
 #include "texture.hh"
 #include "entity.hh"
 
-namespace geo
+namespace vomit
 {
   //verrà riempita una struct di questo tipo all'avvio del motore o quando specificato in console
   struct game_info_t
