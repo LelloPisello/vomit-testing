@@ -50,7 +50,7 @@ namespace vomit
         explicit entity_list_t(u16 num_types);
         explicit entity_list_t(const char* filename);
         entity_list_t(const entity_list_t&) = delete;
-        entity_list_t(entity_list&&);
+        entity_list_t(entity_list_t&&);
         ~entity_list_t(void);
         
         entity_list_t& from_file(const char* filename); 

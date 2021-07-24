@@ -13,7 +13,7 @@ namespace vomit
     //da riempire con il codice analogo al costruttore (const char*) 
     return *this;
   }
-  color32_t palette_t::operator[] (u8 index)
+  color32_t palette_t::operator[] (u8 index) const
   {
     return range[index]; 
   }
@@ -26,7 +26,7 @@ namespace vomit
   { //elimina i dati salvati in memoria dinamica con la texture
     for (int i = 0; i < image_size.x; ++i) delete[] image[i]; 
   }
-  color32_t texture_t::from_uv(float x, float y)
+  color32_t texture_t::from_uv(float x, float y) const
   {//ritorna il colore della texture al punto x, y
     return image
       [
@@ -46,7 +46,7 @@ namespace vomit
   {//elimina la parte di memoria dinamica della texture
     for(int i = 0; i < image_size.x; ++i) delete[] image[i];
   }
-  u8 palette_texture_t::from_uv(float x, float y) // da sostituire unsigned char con byte_t 
+  u8 palette_texture_t::from_uv(float x, float y) const // da sostituire unsigned char con byte_t 
   {
     //ritorna il colore della palette rispetto all'indice dato dalla texture
     return
