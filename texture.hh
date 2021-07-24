@@ -65,7 +65,7 @@ namespace vomit
     palette_texture_list_t(void);
     palette_texture_list_t(const char* filename);
     ~palette_texture_list_t(void);
-    palette_texture_list_t& from_file(const char* filename) // carica la lista di texture da un file .ptxl (palette texture list)
+    palette_texture_list_t& from_file(const char* filename); // carica la lista di texture da un file .ptxl (palette texture list)
   };
 
 } //namespace geo
