@@ -33,7 +33,7 @@ namespace vomit
     entity_list_t entity_list; //array contenente le entità, (si potrebbe escludere il numero di tipi da qua dentro)
     map_t(const map_t&);
     map_t(map_t&&);
-    constexpr map_t(void) : sectors(nullptr), num_sectors(0) {}
+    map_t(void) = delete;
     ~map_t(void);
   };
 }
