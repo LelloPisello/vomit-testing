@@ -163,8 +163,10 @@ namespace vomit
         mesh3D(const char* filename); //da .obj
         ~mesh3D(void);
         triangle3D* triangles; //non condividiamo vertici tra triangoli dato il numero ristretto
-        unsigned short triangle_num;
+        u16 triangle_num;
         mesh3D& from_file(const char* filename); //solita roba 
+        mesh3D& operator = (const mesh3D&);
+        mesh3D& operator = (mesh3D&&);
     };
     
     struct pLight3D

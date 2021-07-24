@@ -72,11 +72,31 @@ namespace vomit
         vec3 normalize(const vec3& that)
         {
             float m = 1. / length(that);
-            return that * m;
+            return that * vec3(m);
         }
         vec2 normalize(const vec2& that)
         {
             float m = 1. / length(that);
-            return that * m;
+            return that * vec2(m);
+        }
+
+        mesh3D& mesh3D::operator=(const mesh3D& obj)
+        {
+            if(triangles) delete[] triangles;
+            triangle_num = obj.triangle_num;
+            triangles = new triangle3D[triangle_num];
+            for(u16 i = 0; i < triangle_num; ++i)
+            {
+                triangles[i] = obj.triangles[i];
+            }
+            return *this;
+        }
+        mesh3D& mesh3D::operator=(mesh3D&& obj)
+        {
+            if(triangles) delete[] triangles;
+            triangle_num = obj.triangle_num;
+            triangles = obj.triangles;
+            obj.triangles = nullptr;
+            return *this;
         }
 }
