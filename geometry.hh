@@ -4,7 +4,7 @@
 #include "utils.hh"
 
 //IMPORTANTE: le funzioni constexpr vengono definite qua
-namespace geo
+namespace vomit
 {
     struct vec2
     {

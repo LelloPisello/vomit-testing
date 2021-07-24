@@ -4,7 +4,7 @@
 #include "geometry.hh"
 #include "utils.hh"
 
-namespace geo
+namespace vomit
 {
     struct entity_info_t //contiene le informazioni condivise per ogni tipo di entità 
     {

@@ -7,7 +7,7 @@
 #include "utils.hh"
 //caricamento mappe e strutture per contenere i dati sulla mappa
 
-namespace geo
+namespace vomit
 {
   //contiene tutte le informazioni sulla mappa
   /*

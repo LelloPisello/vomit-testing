@@ -5,7 +5,7 @@
 #include "utils.hh"
 #include "geometry.hh"
 
-namespace geo
+namespace vomit
 {
   struct color24_t //colore a 24 bit (come da schermo)
   {

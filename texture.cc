@@ -1,7 +1,7 @@
 #include "texture.hh"
 #include "utils.hh"
 
-namespace geo
+namespace vomit
 {
   //sezione dedicata ad alcuni costruttori e funzioni della struttura palette_t
   palette_t::palette_t(const char* filename)

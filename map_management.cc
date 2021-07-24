@@ -1,6 +1,6 @@
 #include "map_management.hh"
 
-namespace geo
+namespace vomit
 {
   //costruttore di copia
   map_t::map_t(const map_t& that) : num_sectors(that.num_sectors), sectors(new mesh3D[that.num_sectors])

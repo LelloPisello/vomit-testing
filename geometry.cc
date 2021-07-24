@@ -1,7 +1,7 @@
 #include "geometry.hh"
 #include <cmath>
 
-namespace geo
+namespace vomit
 {
     //vec3:
         //costruttori
