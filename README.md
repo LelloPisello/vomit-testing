@@ -5,8 +5,8 @@ motore 3D che prende spunto dal Quake Engine e da idTech 2.
 nel futuro si spera che diventi un motore utilizzabile.
 
 ### librerie utilizzate per ora
-- GLFW: contesto openGL e finestre
-- GLAD: funzioni openGL
+- [GLFW](https://www.glfw.org "la homepage di GLFW"): contesto openGL e finestre
+- [GLAD](https://github.com/Dav1dde/glad/tree/glad2 "github di GLAD2"): funzioni openGL
 
 ### obiettivi per il futuro
 - rimuovere l'utilizzo di qualsiasi libreria oltre la STL e la SDK di sistema
