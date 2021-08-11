@@ -140,7 +140,6 @@ namespace vomit
     {
         vec3 position;
         vec2 uv;
-        u8 texture_index;
         /*
         #TODO aggiungere una classe per le texture, così da assegnare ad ogni triangolo una texture specifica 
         sarebbe più veloce avere un array di texture globale e salvare per ogni triangolo l'indice della texture in questo array? SI FATTO
