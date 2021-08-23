@@ -6,7 +6,7 @@ nel futuro si spera che diventi un motore utilizzabile.
 
 ### librerie utilizzate per ora
 - GLFW: contesto openGL e finestre
-- GLAD: funzioni openGL
+- Vulkan-SDK (vulkan API)
 
 ### obiettivi per il futuro
 - rimuovere l'utilizzo di qualsiasi libreria oltre la STL e la SDK di sistema
