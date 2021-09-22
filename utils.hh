@@ -27,4 +27,11 @@ struct binary_tree_t
   _type data;
 };
 
+template <typename _type>
+struct container_t
+{
+  unsigned num_users;
+  _type data;
+};
+
 #endif
